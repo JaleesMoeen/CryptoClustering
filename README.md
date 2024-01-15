@@ -12,104 +12,69 @@ Hi, let's find out out optimized clusters through implementation of elbow method
 
 ### 1 Introduction 
 
+The objective of the Cryptoclustering project is to employ unsupervised learning, particularly K-means clustering, to forecast whether cryptocurrencies exhibit influence from 24-hour or 7-day price variations. 
+
+Furthermore, the project investigates the implications of dimensionality reduction through Principal Component Analysis (PCA) on the clustering outcomes.
+
 Through innovative data analysis and visualization techniques, Cryptoclustering aims to provide valuable insights, aiding investors, analysts, and researchers in navigating the complexities of the ever-evolving cryptocurrency landscape.
-
-
-![Alt text](Images/2_usgs.png)
-
 
 
 ### 2 Prerequisites
 
 Before you begin, ensure you have the following installed:
 
-HTML, CSS ( for structure and style web page)
+Python (version 3.9 or later)
 
-JavaScript ( for dynamic behavior)
+Jupyter Notebooks
 
-D3.js ( for data manipulation)
-
-Leaflet.js ( for interactive maps )
+Python libraries ( pandas, scikit-learn, matplotlib, seaborn )
 
 
-### 3 Data Sources
-
-We used the two data scources:
-
-To visualize an earthquake dataset [USGS GeoJSON Feed](https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php)
-
-To visualize realtionships between tectonic plates and seismic activities [Tectonic Plates Dataset](https://github.com/fraxen/tectonicplates)
+### 3 Data Source
 
 
-![Alt text](Images/3_world_map.jpg)
+![Alt text](images/2_data_scource.png)
 
 
-### 4 Features
+### 4 How it Works 
 
-Leaflet-based interactive map.
+- Prepare the data with StandardScaler() module from scikit-learn to normalize the data from the CSV file.
 
-Visualization of earthquake data based on longitude and latitude.
+- Determine the optimal value for k using the elbow method.
 
-Data markers reflecting earthquake magnitude (size) and depth (color).
+- Apply K-means clustering to the original scaled data.
 
-Popups with additional information about each earthquake.
+- Conduct Principal Component Analysis (PCA) to reduce features to three principal components.
 
-Map legend providing context for the data.
+- Identify the optimal k value using the PCA-transformed data.
 
-Visualization of tectonic plates dataset.
+- Apply K-means clustering on cryptocurrencies using the PCA-transformed data.
 
-Multiple base maps and overlays.
-
-Layer controls for independent toggling of datasets.
+- Visualize and compare the clustering results using hvPlot.
 
 
-### 5 Execution with D3.js and Leaflet.js
+### 5 How Data Elbow Cuves and Clustering Shown 
+
+When apply PCA, our elbow curve is similar to the original data and gives us the same value of k=4 . 
+
+Also, after applying PCA, the clusters grouping are much clear than the origninal data.
 
 
-We performed the following operations for the logic.js in both the folders "Leafelt-Part-1" and "Leafelt-Part-1":
-
-- Using Leaflet, create a map that plots all the earthquakes from your dataset based on their longitude and latitude.
-
-- Include popups that provide additional information about the earthquake when its associated marker is clicked.
-
-- Create a legend that will provide context for your map data.
+![Alt text](images/3_elbow_curves.png)
 
 
-Additionally, to plot the tectonic plates and seismic activities, we added the follwoing operations:
+
+![Alt text](images/4_original_data_scatter.png)
 
 
-- Plotted the tectonic plates dataset on the map in addition to the earthquakes.
 
-- Added the gray sclae, outdoor , and satellite base maps.
-
-- Put each dataset into separate overlays that can be turned on and off independently.
-
-- Added layer controls to your map.
-
-### 7 Earthquake Data Visulaizations
-
-At a glance , there is the earthquake visualiations where the set view is pinned at Ontario, Canada.
+![Alt text](images/5_pca_data_scatter.png)
 
 
-![Alt text](Images/4_earthquakes_visualizations.png)
 
+### 6 Conclusion
 
-### 8 Visulaizations of Relationship b/w Tectonic Plates & Seismic Activities
-
-Below is a glimpse of how the realtionship between tectonic plates and seismic activities looks like:
-
-
-![Alt text](Images/5_tectonic_plates.png)
-
-
-### 9 Usage
-
-We can visualize the data on the map for earthquakes details and the relationships between tectonic plates and seismic activities.
-
-
-### 10 Deployment
-
-This dashboard is deployed on [GitHub Pages](https://jaleesmoeen.github.io/USGS_Earthquake_Visualizations/).
+The clustering project reveals distinct cryptocurrency clusters, affirms the efficacy of dimensionality reduction via PCA, and suggests actionable insights for market understanding and investment strategies.
 
 
 ## Author
