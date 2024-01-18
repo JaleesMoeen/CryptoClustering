@@ -7,7 +7,7 @@
 Hi, let's find out out optimized clusters through implementation of elbow method, K-means and PCA algorithms.
 
 
-![Alt text](images/1_crypto.png)
+![Alt text](images/6_unsupervised_ML.png)
 
 
 ### 1 Introduction 
@@ -15,6 +15,8 @@ Hi, let's find out out optimized clusters through implementation of elbow method
 The objective of the Cryptoclustering project is to employ unsupervised learning, particularly K-means clustering, to forecast whether cryptocurrencies exhibit influence from 24-hour or 7-day price variations. 
 
 Furthermore, the project investigates the implications of dimensionality reduction through Principal Component Analysis (PCA) on the clustering outcomes.
+
+![Alt text](images/1_crypto.png)
 
 Through innovative data analysis and visualization techniques, Cryptoclustering aims to provide valuable insights, aiding investors, analysts, and researchers in navigating the complexities of the ever-evolving cryptocurrency landscape.
 
